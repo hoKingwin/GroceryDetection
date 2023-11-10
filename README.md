@@ -1,18 +1,18 @@
 # GroceryDetection
 grocery yolov7 object detection
 
-apt-get update
-apt-get install git
-git clone https://github.com/hoKingwin/GroceryDetection.git
-
-cd GroceryDetection
-git clone https://github.com/WongKinYiu/yolov7.git
-
-cd yolov7
-wget https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7.pt
-
-pip3 install -r requirements.txt
-
+apt-get update<br />
+apt-get install git<br />
+git clone https://github.com/hoKingwin/GroceryDetection.git<br />
+<br />
+cd GroceryDetection<br />
+git clone https://github.com/WongKinYiu/yolov7.git<br />
+<br />
+cd yolov7<br />
+wget https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7.pt<br />
+<br />
+pip3 install -r requirements.txt<br />
+<br />
 <h1>Train</h1>
 python train.py --workers 8 --device 0 --batch-size 32 --epochs 100 --img 640 640 --data ../custom_data.yaml --hyp data/hyp.scratch.custom.yaml --cfg ../yolov7-custom.yaml --name yolov7-custom --weights yolov7.pt
 
